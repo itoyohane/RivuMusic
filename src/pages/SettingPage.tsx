@@ -7,10 +7,18 @@ import { AudioEngineCard } from "@/components/settings/AudioSettings/AudioEngine
 import { AudioSettingCard } from "@/components/settings/AudioSettings/AudioSettingCard";
 import { DownloadSettingCard } from "@/components/settings/AudioSettings/DownloadSettignCard";
 import { MusicFolderSettingCard } from "@/components/settings/AudioSettings/MusicFolderSettingCard";
+import { AlbumAiSettingCard } from "@/components/settings/AiSettings/AlbumAiSettingCard";
 
 export default function SettingPage() {
 	return (
 		<div className="flex h-full w-full flex-col gap-8 px-8 py-8">
+			<div className="flex h-full w-full flex-col gap-3">
+				<h2 className="text-sm font-medium text-foreground/88">AI 推荐</h2>
+				<div className="flex flex-col gap-2">
+					<AlbumAiSettingCard />
+				</div>
+			</div>
+
 			<div className="flex h-full w-full flex-col gap-3">
 				<h2 className="text-sm font-medium text-foreground/88">音频与下载</h2>
 

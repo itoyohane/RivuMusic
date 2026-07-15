@@ -12,6 +12,7 @@ import { usePlayerStore } from "@/lib/store/playerStore/playerStore";
 import { useUserStore } from "@/lib/store/userStore/userStore";
 import type { AlbumRecommendation } from "@/lib/types";
 import { formateDate, GetThumbnail } from "@/lib/utils";
+import { AlbumAiGuideDialog } from "./album-ai-guide-dialog";
 
 interface AlbumRecommendationCardProps {
 	recommendation: AlbumRecommendation;
@@ -84,6 +85,8 @@ export function AlbumRecommendationCard({
 				</p>
 
 				<div className="mt-auto flex items-center justify-end gap-1">
+					<AlbumAiGuideDialog recommendation={recommendation} />
+
 					<Tooltip>
 						<TooltipTrigger asChild>
 							<YeeButton

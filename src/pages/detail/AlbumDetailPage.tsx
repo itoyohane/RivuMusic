@@ -19,6 +19,13 @@ import { useUserStore } from "@/lib/store/userStore/userStore";
 import { subAlbum } from "@/lib/services/user";
 import { toast } from "sonner";
 import { BlurLayer } from "@/components/blur-layer";
+import { openUrl } from "@tauri-apps/plugin-opener";
+import { ExternalLink } from "lucide-react";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function AlbumContent() {
 	const [searchParams] = useSearchParams();
@@ -158,6 +165,22 @@ function AlbumContent() {
 				</div>
 
 				<div className="flex gap-4 pr-8 z-10">
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<YeeButton
+								variant="glass"
+								size="lg"
+								icon={<ExternalLink className="size-4" />}
+								onClick={() =>
+									openUrl(`https://music.163.com/#/album?id=${id}`)
+								}
+								aria-label="在网易云音乐中打开"
+							/>
+						</TooltipTrigger>
+						<TooltipContent sideOffset={6}>
+							在网易云音乐中打开
+						</TooltipContent>
+					</Tooltip>
 					<YeeButton
 						variant="glass"
 						size="lg"

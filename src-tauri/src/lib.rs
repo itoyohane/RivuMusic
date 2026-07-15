@@ -1,3 +1,4 @@
+mod ai;
 mod audio;
 mod cache;
 mod download;
@@ -165,6 +166,7 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .invoke_handler(tauri::generate_handler![
             greet,
+            ai::request_ai_album_guide,
             smtc::smtc_update_metadata,
             smtc::smtc_update_playback,
             cache::check_audio_cache,
