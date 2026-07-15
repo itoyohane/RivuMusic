@@ -91,7 +91,7 @@ src-tauri/src/ai.rs
 
 - Windows 10 / 11
 - Node.js 22.13 以上，推荐 24
-- npm 10 以上
+- pnpm 11
 - Rust stable
 - C++ Build Tools
 - Edge WebView2
@@ -101,8 +101,8 @@ src-tauri/src/ai.rs
 ```bash
 git clone https://github.com/itoyohane/RivuMusic.git
 cd RivuMusic
-npm install
-npm run tdev
+pnpm install
+pnpm tdev
 ```
 
 进入侧栏的“专辑发现”即可查看推荐。
@@ -127,14 +127,14 @@ API Key 只保存在本机，不会写入仓库。生产环境仍应改用系统
 ### 构建检查
 
 ```bash
-npm run build
+pnpm build
 cargo check --manifest-path src-tauri/Cargo.toml
 ```
 
 完整桌面构建：
 
 ```bash
-npm run tbuild
+pnpm tbuild
 ```
 
 ## Demo 演示顺序
