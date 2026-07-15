@@ -89,7 +89,7 @@ pnpm tdev
 
 ### 1. 环境要求
 
-- **Node.js**: >= 20
+- **Node.js**: >= 22.13（推荐 24，适配 pnpm 11）
 - **Rust**
 - **Windows 依赖**: 确保已安装 C++ 生成工具和 Edge WebView2 运行时
 

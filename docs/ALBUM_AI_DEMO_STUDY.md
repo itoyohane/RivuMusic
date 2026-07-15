@@ -79,7 +79,7 @@ album-ai-guide-dialog.tsx    展示未配置、生成中、结果和错误状态
 
 ## 8. 如何运行
 
-需要 Node.js 20 以上、pnpm、Rust stable、Windows C++ 构建工具和 WebView2。
+需要 Node.js 22.13 以上（推荐 24）、pnpm 11、Rust stable、Windows C++ 构建工具和 WebView2。
 
 ```bash
 git clone https://github.com/itoyohane/RivuMusic.git
