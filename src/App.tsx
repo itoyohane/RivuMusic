@@ -17,6 +17,7 @@ import DownloadPage from "./pages/library/DownloadPage";
 import LocalPage from "./pages/library/LocalPage";
 import { DailyRecommendPage } from "./pages/recommend/DailyRecommendPage";
 import TrayMenu from "./pages/TrayMenu";
+import { AlbumDiscoveryPage } from "./pages/recommend/AlbumDiscoveryPage";
 
 const router = createBrowserRouter([
 	{
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <HomePage />,
+			},
+			{
+				path: "discover/albums",
+				element: <AlbumDiscoveryPage />,
 			},
 			{
 				path: "search",

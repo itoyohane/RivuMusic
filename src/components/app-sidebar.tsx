@@ -1,5 +1,5 @@
 import { useUserStore } from "@/lib/store/userStore/userStore";
-import { Playlist } from "@/lib/types";
+import type { Playlist } from "@/lib/types";
 import {
 	Add20Regular,
 	ArrowDownload20Filled,
@@ -8,7 +8,7 @@ import {
 	Clock20Regular,
 	Cloud20Filled,
 	Cloud20Regular,
-	FluentIcon,
+	type FluentIcon,
 	Folder20Filled,
 	Folder20Regular,
 	Heart20Filled,
@@ -18,8 +18,16 @@ import {
 	List24Regular,
 	Settings20Regular,
 } from "@fluentui/react-icons";
+import { Disc3 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+	type ComponentType,
+	useCallback,
+	useLayoutEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { PlaylistAddForm } from "./modal/playlist-add-form";
@@ -42,6 +50,12 @@ const mainItems = [
 		url: "/",
 		icon: Home20Regular,
 		activeIcon: Home20Filled,
+	},
+	{
+		title: "专辑发现",
+		url: "/discover/albums",
+		icon: Disc3,
+		activeIcon: Disc3,
 	},
 ];
 
@@ -97,8 +111,8 @@ export function AppSidebar() {
 	const isItemActive = (item: {
 		title: string;
 		url: string;
-		icon: FluentIcon;
-		activeIcon: FluentIcon;
+		icon: ComponentType<{ className?: string }> | FluentIcon;
+		activeIcon: ComponentType<{ className?: string }> | FluentIcon;
 	}) => {
 		if (item.url && item.url !== "#") {
 			return pathName === item.url || pathName.startsWith(`${item.url}/`);
