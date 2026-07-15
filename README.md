@@ -20,6 +20,28 @@
   </a>
 </div>
 
+## 💿 专辑 AI Demo
+
+`codex/album-ai-demo` 分支在原播放器基础上增加了以专辑为主体的推荐体验：
+
+- 根据收藏专辑和收藏音乐人推荐其他完整专辑
+- 未登录时使用公开新碟完成冷启动
+- 推荐结果支持筛选、收藏和直接播放
+- 支持 DeepSeek、通义千问、OpenAI 等兼容接口生成 AI 听前导览
+- 专辑详情可跳转到网易云音乐
+
+这个分支不创建 PR、不合并到 `main`，可以独立检出运行：
+
+```bash
+git clone https://github.com/itoyohane/RivuMusic.git
+cd RivuMusic
+git switch codex/album-ai-demo
+pnpm install
+pnpm tdev
+```
+
+学习入口：[原项目学习文档](./docs/ORIGINAL_PROJECT_STUDY.md) · [改造后学习文档](./docs/ALBUM_AI_DEMO_STUDY.md) · [一个月 Demo 计划](./one_month_demo_plan.md)
+
 > [!IMPORTANT]
 > **关于项目维护状态的声明**
 > 
